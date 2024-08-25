@@ -37,7 +37,7 @@
 
         /* Hero Section */
         .hero {
-            position: relative; /* Pastikan elemen ini relative untuk z-index bekerja */
+            position: relative;
             height: 100vh;
             color: #fff;
             text-align: center;
@@ -51,12 +51,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; /* Pastikan gambar background berada di belakang konten */
+            z-index: -1;
         }
 
         .hero-content {
             position: relative;
-            z-index: 1; /* Konten berada di atas gambar background */
+            z-index: 1;
             max-width: 90%;
             margin: auto;
             padding: 0 20px;
@@ -69,7 +69,7 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #e50914; /* Accent color */
+            color: #e50914;
         }
 
         .hero p {
@@ -100,7 +100,7 @@
             text-align: center;
             position: relative;
             z-index: 1;
-            background-color: #222; /* Ganti latar belakang dengan warna solid atau hilangkan jika tidak diperlukan */
+            background-color: #222;
         }
 
         .about h2 {
@@ -307,35 +307,28 @@
             border-radius: 5px;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .contact button:hover {
             background-color: #b20710;
-        }
-
-        .map {
-            margin-top: 30px;
-        }
-
-        .map iframe {
-            border: none;
-            width: 100%;
-            height: 300px;
-            border-radius: 5px;
+            transform: scale(1.05);
         }
 
         /* Footer */
-        footer {
+        .footer {
+            padding: 20px;
             background-color: #111;
-            color: #777;
             text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
+            color: #bbb;
         }
 
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -344,8 +337,9 @@
                 font-size: 1.2rem;
             }
 
-            .about h2 {
-                font-size: 2rem;
+            .cta {
+                font-size: 1rem;
+                padding: 10px 20px;
             }
 
             .about p {
@@ -360,28 +354,12 @@
                 font-size: 1.4rem;
             }
 
-            .product-item p {
-                font-size: 1rem;
-            }
-
             .photo-gallery h2 {
                 font-size: 2rem;
             }
-
-            .contact h2 {
-                font-size: 2rem;
-            }
-
-            .contact input, .contact textarea {
-                font-size: 0.9rem;
-            }
-
-            .contact button {
-                font-size: 0.9rem;
-            }
         }
 
-        @media screen and (max-width: 480px) {
+        @media (max-width: 480px) {
             .hero h1 {
                 font-size: 1.8rem;
             }
@@ -390,8 +368,9 @@
                 font-size: 1rem;
             }
 
-            .about h2 {
-                font-size: 1.8rem;
+            .cta {
+                font-size: 0.9rem;
+                padding: 8px 15px;
             }
 
             .about p {
@@ -406,194 +385,84 @@
                 font-size: 1.2rem;
             }
 
-            .product-item p {
-                font-size: 0.9rem;
-            }
-
             .photo-gallery h2 {
                 font-size: 1.8rem;
-            }
-
-            .contact h2 {
-                font-size: 1.8rem;
-            }
-
-            .contact input, .contact textarea {
-                font-size: 0.8rem;
-            }
-
-            .contact button {
-                font-size: 0.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Global Background -->
     <div class="background"></div>
-
-    <!-- Hero Section -->
     <header class="hero">
-        <img src="foto4.png" alt="Background Hero" class="background">
+        <img src="path_to_your_hero_image.jpg" alt="Hero Image" class="background">
         <div class="hero-content">
-            <h1>Mengemudi Masa Depan Anda Hari Ini</h1>
-            <p>Temukan mobil impian Anda dengan pelayanan terbaik.</p>
-            <a href="#products" class="cta">Lihat Koleksi</a>
+            <h1>Dealer Mobil Sport Terbaik</h1>
+            <p>Kami menyediakan mobil-mobil sport terbaru dengan kualitas terbaik.</p>
+            <a href="#contact" class="cta">Hubungi Kami</a>
         </div>
     </header>
 
-    <!-- About Us -->
-    <section id="about" class="about">
+    <section class="about">
         <h2>Tentang Kami</h2>
-        <p>Kami adalah dealer mobil mewah yang berdedikasi untuk memberikan layanan terbaik dan pilihan kendaraan berkualitas tinggi. Dengan pengalaman bertahun-tahun dalam industri otomotif, kami berkomitmen untuk memenuhi kebutuhan pelanggan kami dengan sempurna.</p>
+        <p>Kami adalah dealer mobil sport terkemuka dengan berbagai pilihan mobil sport premium. Dengan pengalaman bertahun-tahun, kami berkomitmen untuk memberikan layanan terbaik kepada pelanggan kami.</p>
     </section>
 
-    <!-- Products & Services -->
-    <section id="products" class="products">
-        <h2>Produk dan Layanan</h2>
+    <section class="products">
+        <h2>Produk Kami</h2>
         <div class="product-gallery">
-            <div class="product-item" onclick="openModal('modal1')">
-                <img src="foto1.jpg" alt="Mobil 1">
-                <h3>Mobil Model X</h3>
-                <p>Spesifikasi singkat mobil.</p>
+            <div class="product-item">
+                <img src="path_to_your_product_image_1.jpg" alt="Produk 1">
+                <h3>Mobil Sport 1</h3>
+                <p>Deskripsi singkat tentang mobil sport 1.</p>
             </div>
-            <div class="product-item" onclick="openModal('modal2')">
-                <img src="foto3.jpg" alt="Mobil 2">
-                <h3>Mobil Model Y</h3>
-                <p>Spesifikasi singkat mobil.</p>
+            <div class="product-item">
+                <img src="path_to_your_product_image_2.jpg" alt="Produk 2">
+                <h3>Mobil Sport 2</h3>
+                <p>Deskripsi singkat tentang mobil sport 2.</p>
             </div>
-        <div class="product-item" onclick="openModal('modal2')">
-            <img src="foto3.jpg" alt="Mobil 2">
-            <h3>Mobil Model Y</h3>
-            <p>Spesifikasi singkat mobil.</p>
-        </div>
-        <div class="product-gallery">
-            <div class="product-item" onclick="openModal('modal1')">
-                <img src="foto1.jpg" alt="Mobil 1">
-                <h3>Mobil Model X</h3>
-                <p>Spesifikasi singkat mobil.</p>
-            </div>
-            <div class="product-item" onclick="openModal('modal2')">
-                <img src="foto3.jpg" alt="Mobil 2">
-                <h3>Mobil Model Y</h3>
-                <p>Spesifikasi singkat mobil.</p>
-            </div>
-        <div class="product-item" onclick="openModal('modal2')">
-            <img src="foto3.jpg" alt="Mobil 2">
-            <h3>Mobil Model Y</h3>
-            <p>Spesifikasi singkat mobil.</p>
-        </div>
-        <div class="product-gallery">
-            <div class="product-item" onclick="openModal('modal1')">
-                <img src="foto1.jpg" alt="Mobil 1">
-                <h3>Mobil Model X</h3>
-                <p>Spesifikasi singkat mobil.</p>
-            </div>
-            <div class="product-item" onclick="openModal('modal2')">
-                <img src="foto3.jpg" alt="Mobil 2">
-                <h3>Mobil Model Y</h3>
-                <p>Spesifikasi singkat mobil.</p>
-            </div>
-        <div class="product-item" onclick="openModal('modal2')">
-            <img src="foto3.jpg" alt="Mobil 2">
-            <h3>Mobil Model Y</h3>
-            <p>Spesifikasi singkat mobil.</p>
-        </div>
-            <!-- Tambah produk lainnya -->
+            <!-- Tambahkan lebih banyak produk sesuai kebutuhan -->
         </div>
     </section>
 
-    <!-- Modal 1 -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal1')">&times;</button>
-            <h3>Mobil Model X</h3>
-            <p>Spesifikasi Lengkap Mobil Model X:
-                <ul>
-                    <li>Mesin: V8 4.0L</li>
-                    <li>Tenaga: 500 HP</li>
-                    <li>Transmisi: Otomatis 8-percepatan</li>
-                    <li>Fitur Keselamatan: ABS, Airbags, Lane Assist</li>
-                    <li>Harga: Rp1.500.000.000</li>
-                </ul>
-            </p>
-        </div>
-    </div>
-
-    <!-- Modal 2 -->
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal2')">&times;</button>
-            <h3>Mobil Model Y</h3>
-            <p>Spesifikasi Lengkap Mobil Model Y:
-                <ul>
-                    <li>Mesin: V6 3.0L</li>
-                    <li>Tenaga: 400 HP</li>
-                    <li>Transmisi: Manual 6-percepatan</li>
-                    <li>Fitur Keselamatan: ABS, Airbags, Traction Control</li>
-                    <li>Harga: Rp1.200.000.000</li>
-                </ul>
-            </p>
-        </div>
-    </div>
-
-    <!-- Photo Gallery Section -->
-    <section id="photo-gallery" class="photo-gallery">
-        <h2>Serah Terima Mobil</h2>
+    <section class="photo-gallery">
+        <h2>Galeri Foto</h2>
         <div class="photo-grid">
-            <img src="serah-terima1.jpg" alt="Serah Terima Mobil 1">
-            <img src="serah-terima2.jpg" alt="Serah Terima Mobil 2">
-            <!-- Tambahkan lebih banyak gambar serah terima -->
+            <img src="path_to_your_photo_1.jpg" alt="Foto 1">
+            <img src="path_to_your_photo_2.jpg" alt="Foto 2">
+            <!-- Tambahkan lebih banyak foto sesuai kebutuhan -->
         </div>
     </section>
 
-    <!-- Contact Us -->
-    <section id="contact" class="contact">
+    <section class="contact" id="contact">
         <h2>Kontak Kami</h2>
-        <form>
+        <form action="submit_form.php" method="post">
             <label for="name">Nama:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <label for="message">Pesan:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" rows="5" required></textarea>
             <button type="submit">Kirim Pesan</button>
         </form>
-        <div class="map">
-            <h3>Lokasi Kami</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
-        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Dealer Mobil Mewah. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; 2024 Dealer Mobil Sport. Semua hak dilindungi.</p>
     </footer>
-   <!-- Audio Element -->
-   <audio id="carSound" src="suaramobil.mp3" preload="auto"></audio>
 
-   <script>
-       // JavaScript untuk memutar efek suara saat halaman dimuat
-       window.addEventListener('load', () => {
-           const carSound = document.getElementById('carSound');
-            const backgroundMusic = document.getElementById('background-music');
-           carSound.play();
-       });
-   </script>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h3>Detail Produk</h3>
+            <p>Informasi lebih lanjut tentang produk.</p>
+        </div>
+    </div>
+
     <script>
-        // Function to open modal
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'flex';
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
         }
-
-        // Function to close modal
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
-
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Pesan Anda telah dikirim!');
-        });
     </script>
 </body>
 </html>
